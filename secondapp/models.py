@@ -1,6 +1,8 @@
+# 마이그레이션 작업 시 자동으로 앱의 이름이 붙게 됨
 from django.db import models
 
-class Hospital(models.Model):
+class Hospital(models.Model): # secondapp_hospital
+    # id = moedels.CharField(max_length=255) 생략가능, 자동 생성
     sido = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     medical = models.CharField(max_length=255)
